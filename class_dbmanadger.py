@@ -1,8 +1,9 @@
 import psycopg2
 
 class DBManager:
-    """Класс, который подключается к БД PostgreSQL."""
-    pass
+    """Класс получения информации из БД"""
+    def __init__(self, cursor):
+        self.cursor = cursor
 
     def get_companies_and_vacancies_count(self):
         """Получение списка компаний и кол-ва вакансий"""

@@ -39,6 +39,5 @@ def get_vacancies():
 
     return vacancies_list
 
-vacancies_list = get_vacancies()
-
-pprint(vacancies_list[0])
+# vacancies_list = get_vacancies()
+# pprint(vacancies_list[0])

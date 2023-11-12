@@ -1,6 +1,5 @@
 ------ удаляем таблицы если они есть
----DROP TABLE IF EXISTS employers;
----DROP TABLE IF EXISTS vacancies;
+DROP TABLE employers, vacancies;
 
 --- выполните в pgAdmin 4
 
@@ -25,4 +24,4 @@ CREATE TABLE vacancies (
     vacancy_salary_from int NOT NULL,
     vacancy_salary_to int NOT NULL,
     vacancy_url text
-);
+)
