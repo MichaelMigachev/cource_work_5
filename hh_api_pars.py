@@ -38,6 +38,3 @@ def get_vacancies():
                     vacancies_list.append(item)
 
     return vacancies_list
-
-# vacancies_list = get_vacancies()
-# pprint(vacancies_list[0])
