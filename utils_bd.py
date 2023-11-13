@@ -1,6 +1,6 @@
 import psycopg2
-# import colorama
 from configparser import ConfigParser
+
 vacancies_id_dict = {
         "СБЕР": "3529",
         "Газпром нефть": "39305",
@@ -47,6 +47,7 @@ def create_db(params, db_name) -> None:
      print("Создание базы данных завершено!")
 
      #  создание таблиц
+     print("Создание таблиц с работодателями и вакансиями")
      conn = psycopg2.connect(dbname=db_name, **params)
      with conn.cursor() as cur:
          cur.execute("""
@@ -71,6 +72,8 @@ def create_db(params, db_name) -> None:
      conn.commit()
      conn.close()
 
+     print("Создание таблиц завершено!")
+
 def save_data_to_database(vacancies_list, db_name, params ):
     '''Заполнение таблиц'''
 
@@ -87,3 +90,5 @@ def save_data_to_database(vacancies_list, db_name, params ):
 
     conn.commit()
     conn.close()
+
+    print("Таблицы заполнены!")
